@@ -26,5 +26,3 @@ main(){
 }
 
 main
-git config --global user.name "wxnacy"
-git config --global user.email 371032668@qq.com
