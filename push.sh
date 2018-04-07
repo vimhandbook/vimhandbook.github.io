@@ -5,8 +5,6 @@
 
 MSG=$1
 
-
-
 push(){
     echo '******************************'
     echo '********开始push api：'
@@ -28,3 +26,5 @@ main(){
 }
 
 main
+git config --global user.name "wxnacy"
+git config --global user.email 371032668@qq.com
