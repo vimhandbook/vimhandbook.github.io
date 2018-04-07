@@ -1,0 +1,17 @@
+{
+  "name": "vimhandbook.github.io",
+  "homepage": "https://github.com/vimhandbook/vimhandbook.github.io",
+  "authors": [
+    "wenxiaoning <wenxiaoning@gochinatv.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
