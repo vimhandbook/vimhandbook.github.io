@@ -8,4 +8,8 @@
 1. [前言](#README)
 1. [开始](#docs/get_started)
 1. [键位操作](#docs/key-position)
+1. [常用模式](#docs/mode)
+<!-- 1. [vimrc 配置文件](#docs/vimrc) -->
+<!-- 1. [高级键位](#docs/advanced-key-position) -->
+<!-- 1. [附录：Vim 键位整理](#docs/all-key) -->
 
