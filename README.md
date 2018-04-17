@@ -39,4 +39,4 @@
 
 详细的法律条文请参见[创意共享网站](https://creativecommons.org/licenses/by-nc/4.0/)。
 
-2018-04-06 写于北京
+2018-04-06 发布
