@@ -56,3 +56,5 @@
 `quickfix list` 是全局的，相对于窗口而言，不同的窗口共用一个 `quickfix list`，可以使用 `:cw` 或者 `:copen` 打开；而 `loaction list` 是局部于某个特定窗口的，即不同窗口的 `location list` 可以不同，使用 `:lw` 或者 `:lopen` 命令打开。（请使用 `:help quickfix` 和 `:help location-list`命令获取帮助）
 
 在 Vim 命令行模式下输入 `:h vimgrep` 可以看到 `vimgrep` 更多使用文档
+
+2018-05-05 发布
