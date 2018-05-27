@@ -1,0 +1,19 @@
+- hosts: wxnacy
+  remote_user: root
+  tasks:
+  - name: git pull /www/wxnacy
+    shell: git pull
+    args:
+      chdir: /www/wxnacy.github.io
+  - name: git pull yilia
+    shell: git pull
+    args:
+      chdir: /www/wxnacy.github.io/hexo/themes/yilia
+  # - name: deploy nodejs
+    # shell: ./run.sh
+    # args:
+      # chdir: /www/wxnacy.github.io/nodejs
+  # - name: deploy wxnacy.github.io python
+    # shell: ./deploy_api.sh '{{tag_name}}'
+    # args:
+      # chdir: ~/wxnacy.github.io
