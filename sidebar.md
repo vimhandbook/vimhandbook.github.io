@@ -13,5 +13,6 @@
 1. [高级键位](#docs/advanced-key-position)
 1. [vimgrep 全局搜索](#docs/vimgrep)
 1. [Abbreviations 快速输入](#docs/abbreviations)
+1. [Mapping 映射](#docs/mapping)
 1. [附录：Vim 键位整理](#docs/all-key)
 

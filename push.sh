@@ -3,7 +3,7 @@
 # __author__ = "wenxiaoning(wenxiaoning@gochinatv.com)"
 # __copyright__ = "Copyright of GoChinaTV (2017)."
 
-MSG=$1
+MSG=$*
 
 push(){
     echo '******************************'
