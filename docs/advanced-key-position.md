@@ -246,7 +246,7 @@ $ vim Object.java Object.java.copy
 
 ```vim
 cc      " 删除当前行，并进入 insert 模式
-C       " 删除当前行，并进入 insert 模式
+C       " 删除光标到当前行结尾，并进入 insert 模式
 cj      " 删除当前行和下一行，并进入 insert 模式
 c10j    " 删除当前行和下面 10 行，并进入 insert 模式
 ```
