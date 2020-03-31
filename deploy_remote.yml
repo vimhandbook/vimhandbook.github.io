@@ -4,4 +4,4 @@
   - name: git pull
     shell: ./deploy.sh '{{tag_name}}'
     args:
-      chdir: /var/www/vimhandbook.github.io/
+      chdir: /www/vimhandbook.github.io/
