@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>vimrc 配置文件 - Vim 练级手册</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "vimrc \u914d\u7f6e\u6587\u4ef6";
+    var mkdocs_page_input_path = "vimrc.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Vim 练级手册</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">前言</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../get_started/">开始</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../key-position/">键位操作</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mode/">常用模式</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">vimrc 配置文件</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#vimrc">vimrc 配置文件</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_1">快速配置</a></li>
+        
+            <li><a class="toctree-l3" href="#vimrc_1">了解 vimrc</a></li>
+        
+            <li><a class="toctree-l3" href="#vimrc_2">重新加载 vimrc</a></li>
+        
+            <li><a class="toctree-l3" href="#_2">常用的配置</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../advanced-key-position/">高级键位</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vimgrep/">vimgrep 全局搜索</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../abbreviations/">Abbreviations 快速输入</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mapping/">Mapping 映射</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../all-key/">附录：Vim 键位整理</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Vim 练级手册</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>vimrc 配置文件</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/vimhandbook/vimhandbook.github.io/edit/master/docs/vimrc.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="vimrc">vimrc 配置文件</h1>
+<p>很多人感觉 Vim 不如 IDE，通常是因为难看的界面和没那么方便的功能，而究其原因其实是因为他们都没有配好自己的 <code>vimrc</code> 文件，所有的 IDE 都有一个类似这样的文件，只是绝大多数情况下你都碰触不到，而学习 <code>vimrc</code> 则是你配置自己的 IDE 的一个开始。</p>
+<h2 id="_1">快速配置</h2>
+<p>在学习 <code>vimrc</code> 之前，我们先来了解下怎样快速配置。</p>
+<p>首先打开练习文件 <code>Object.java</code>，然后进入 <code>command</code> 模式</p>
+<pre><code class="vim">:set number
+</code></pre>
+
+<p>回车后，你会发现在编辑器的左边出现了行号。</p>
+<p>这是我们配置编辑器的第一步，我们可以在 <code>command</code> 模式下配置然后预览我们的配置结果，但是当你退出文件再进来，会发现刚才的配置已经失效了，它只在当前缓冲区生效，而想要让配置长久生效，就需要将配置信息放入 <code>vimrc</code> 文件中，这样每次打开 Vim 都会读取配置文件。</p>
+<h2 id="vimrc_1">了解 vimrc</h2>
+<p>Vim 读取配置的默认路径为 <code>~/.vimrc</code>，如果你的环境没有需要新建该文件</p>
+<pre><code class="bash">$ touch ~/.vimrc
+</code></pre>
+
+<p>我们在文件中输入设置行号的命令</p>
+<pre><code class="bash">$ vim ~/.vimrc
+
+set number
+</code></pre>
+
+<p>然后退出文件，重新打开 <code>Object.java</code>，会发现行号的配置又生效了。每次使用 Vim 重新打开文件，新加的配置就会生效。</p>
+<h2 id="vimrc_2">重新加载 vimrc</h2>
+<p>现在我们要在加一些改动，你要关掉当前文件再打开 <code>.vimrc</code> 吗？没必要，还记得分割屏幕吗。</p>
+<pre><code class="vim">:vsp ~/.vimrc
+</code></pre>
+
+<p>如此，我们可以一边编辑文件，一边修改配置了。</p>
+<p>先加上这两行配置，并保存</p>
+<pre><code class="vim">set cursorline                  &quot;突出显示当前行&quot;
+set cursorcolumn                &quot;突出显示当前列&quot;
+</code></pre>
+
+<p>然后需要做在 <code>Object.java</code> 中生效，怎么做呢，退出然后重新进来？每次都这样你一定会烦死的，也会显得很蠢（虽然我曾经这样蠢了很久），我们有更好的方法。</p>
+<p>在目标文件中执行如下命令就行了。</p>
+<pre><code class="vim">:source $MYVIMRC
+</code></pre>
+
+<p><code>$MYVIMRC</code> 在 Vim 环境中代表了 <code>~/.vimrc</code> 的常量，这句话的意思就是重新加载配置文件，当然你也可以通过 <code>:source ~/.vimrc</code> 来实现。</p>
+<h2 id="_2">常用的配置</h2>
+<pre><code class="vim">set nocompatible                    &quot; 去掉对vi的兼容，让vim运行在完全模式下
+</code></pre>
+
+<p><code>set compatible</code> 就是让 vim 关闭所有扩展的功能，尽量模拟 vi 的行为。但这样就不应用 vim 的很多强大功能，所以一般没有什么特殊需要的话（比如执行很老的 vi 脚本），都要在 vim 的配置开始，写上 set nocompatible，关闭兼容模式。由于这个选项是最最基础的选项，会连带很多其它选项发生变动（称作副作用），所以它必需是第一个设定的选项。</p>
+<pre><code class="vim">syntax on                   &quot; 开启语法高亮&quot;
+</code></pre>
+
+<p>这个功能对开发尤其有用，Vim 本身是会对一些简单的关键词做高亮处理的，而很多插件对语法高亮也都依赖这个设置。</p>
+<pre><code class="vim">set history=2003            &quot; 记录 Vim 历史操作的条数
+</code></pre>
+
+<p>Vim 内的所有操作都会在一个 <code>~/.viminfo</code> 中记录，该设置可以配置最多记录的条数。</p>
+<pre><code class="vim">set autoread                &quot; 文件在vim外修改过自动重新载入
+au CursorHold,CursorHoldI * checktime
+</code></pre>
+
+<p>默认情况下，外部修改了当前打开的文件，Vim 是不会自动重新载入的，加上这两条配置，Vim 会定时检查是否有外部改动并重载，如果改动不及时，你也可以通过 <code>:e</code> 手动加载。</p>
+<pre><code class="vim">set novisualbell          &quot;关掉可视化响铃警报
+set noerrorbells          &quot;关掉错误警报
+set visualbell t_vb=      &quot;关掉警报
+</code></pre>
+
+<p>闹人的报警声还是挺烦人的，可以关掉它。</p>
+<pre><code class="vim">set tm=500
+set t_Co=256
+</code></pre>
+
+<p>显示 256 色，很多主题插件都需要打开它。</p>
+<pre><code class="vim">filetype on                     &quot; 开启文件类型检测
+filetype plugin on              &quot; 开启插件的支持
+filetype indent on              &quot; 开启文件类型相应的缩进规则
+</code></pre>
+
+<p>这个配置组非常有用，开启后 Vim 可以根据打开的文件格式显示不同的高亮、使用缩进等。不管是使用插件还是自己写插件对他非常依赖。你可以使用 <code>:filetype</code> 来查看当前文件是否开启文件检测</p>
+<pre><code class="vim">&quot; encoding
+set encoding=utf-8              &quot; 打开文件时编码格式
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1         &quot;vim会根据该设置识别文件编码
+
+set fileformat=unix                 &quot; 设置以unix的格式保存文件&quot;
+set fileencoding=utf-8          &quot; 在保存文件时，指定编码
+set termencoding=utf-8          &quot; 终端环境告诉vim使用编码
+set ffs=unix,dos,mac            &quot; 在创建文件或写入时，这三种文件格式分别决定了行末要添加什么特殊字符，而在读入文件时，又分别决定了要从行末移去什么特殊字符。
+set formatoptions+=m
+set formatoptions+=B
+
+&quot; 主题
+set background=dark               &quot; 配色主题的色系,注意，这不是什么背景色！dark 是暗色系，light 是亮色系。
+colorscheme desert              &quot; 配色主题的名称,:coloscheme 后键入&lt;tab&gt;可以自动补全 比较喜欢的desert,peachpuff,torte,elfload,slate
+
+&quot; show
+set number                      &quot; 显示行号
+set ruler                                   &quot; 显示当前光标行号和列
+set wrap                                  &quot; 设置折行 set nowrap 为不折行
+set sidescroll=1                &quot; 默认设置set sidescroll=0之下，当光标到达屏幕边缘时，将自动扩展显示1/2屏幕的文本。通过使用set sidescroll=1设置，可以实现更加平滑的逐个字符扩展显示。
+set showcmd                               &quot; 在屏幕右下角显示未完成的命令
+set showmode                              &quot; 显示当前vim模式
+set showmatch                           &quot; 显示匹配的括号
+set matchtime=1                         &quot; 设置showmatch的效果时间，默认500ms，现在是100ms
+set cursorline                      &quot; 突出显示当前行
+set cursorcolumn                    &quot; 突出显示当前列
+set colorcolumn=80              &quot; 设置某一列高亮
+
+
+&quot; search
+set smartcase                   &quot;搜索时，如果输入大写，则严格按照大小写搜索，如果小写，并设置了ignorecase，则忽略大小写
+set ignorecase                  &quot;搜索时忽略大小写&quot;
+set incsearch                   &quot;搜索时及时匹配搜索内容，需要回车确认
+set hlsearch                    &quot;高亮搜索项&quot;
+
+&quot; tab
+set expandtab                   &quot;将&lt;tab&gt;符号转变为&lt;space&gt;空格
+set smarttab                    &quot;配合shiftwidth使用，如果设置该值，在行首键入&lt;tab&gt;会填充shiftwidth的数值,其他地方使用tabstop的数值，不设置的话，所有地方都是用shiftwidth数值
+
+&quot; indent
+set autoindent                  &quot;换行自动缩进
+set smartindent                 &quot;缩进采用c语言风格
+set shiftround                  &quot;在一般模式下键入&gt;&gt;整个缩进shiftwidth的长度，&lt;&lt;反向操作,== 可以与上一行对齐，插入模式下C-T和C-D也可以左右启动
+set shiftwidth=4                &quot;缩进的空格数
+set tabstop=4                   &quot;键入&lt;tab&gt;的步长
+set softtabstop=4                &quot; insert mode tab and backspace use 4 spaces
+
+&quot; set mark column color
+hi! link SignColumn   LineNr
+hi! link ShowMarksHLl DiffAdd
+hi! link ShowMarksHLu DiffChange
+
+&quot; status line
+set statusline=%&lt;%f\ %h%m%r%=%k[%{(&amp;fenc==\&quot;\&quot;)?&amp;enc:&amp;fenc}%{(&amp;bomb?\&quot;,BOM\&quot;:\&quot;\&quot;)}]\ %-14.(%l,%c%V%)\ %P
+set laststatus=2   &quot; 底部显示两行状态栏&quot;
+
+
+&quot; select &amp; complete
+set selection=inclusive         &quot;选择文本事，光标所在位置也会被选中
+set selectmode=mouse,key
+
+set scrolloff=5                 &quot;距离顶部和底部5行&quot;
+set backspace=2                 &quot;任何情况允许使用退格键删除
+set mouse=a                     &quot;启用鼠标&quot;
+
+&quot; 代码折叠
+set foldlevelstart=99           &quot;默认不折叠&quot;
+set foldmethod=indent           &quot;按照缩紧折叠&quot;
+</code></pre>
+
+<p>剩下这些配置也都很有用，你可以尝试着一个个配置上对比效果。Vim 的配置千变万化，这些只是部分基本配置，基本没有两个人的 <code>vimrc</code> 文件是完全相同，人们会根据当前的学习进度和自己的环境配置不同的样式和功能，这也是 Vim 迷人的地方，构建自己的 IDE，谁不想呢。</p>
+<p>记住，在这个环节需要我们勤用 <code>:help</code> 查看帮助文档，比如 <code>:h showcmd</code> 它的讲解绝对任何人都专业。</p>
+<p>在对 <code>vimrc</code> 有了初步的了解后，以后我们会逐步学习各种高效的配置，让我们的 Vim 越来越得心应手。</p>
+<p>2018-04-17 发布</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../advanced-key-position/" class="btn btn-neutral float-right" title="高级键位">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../mode/" class="btn btn-neutral" title="常用模式"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/vimhandbook/vimhandbook.github.io/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../mode/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../advanced-key-position/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>附录：Vim 键位整理 - Vim 练级手册</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u9644\u5f55\uff1aVim \u952e\u4f4d\u6574\u7406";
+    var mkdocs_page_input_path = "all-key.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Vim 练级手册</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">前言</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../get_started/">开始</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../key-position/">键位操作</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mode/">常用模式</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vimrc/">vimrc 配置文件</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../advanced-key-position/">高级键位</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vimgrep/">vimgrep 全局搜索</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../abbreviations/">Abbreviations 快速输入</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mapping/">Mapping 映射</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">附录：Vim 键位整理</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#vim">Vim 键位整理</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_1">写入、保存、退出</a></li>
+        
+            <li><a class="toctree-l3" href="#_2">光标移动</a></li>
+        
+            <li><a class="toctree-l3" href="#_3">翻页</a></li>
+        
+            <li><a class="toctree-l3" href="#_4">查找与替换</a></li>
+        
+            <li><a class="toctree-l3" href="#_5">复制、粘贴、删除</a></li>
+        
+            <li><a class="toctree-l3" href="#_6">插入</a></li>
+        
+            <li><a class="toctree-l3" href="#_7">撤销重做</a></li>
+        
+            <li><a class="toctree-l3" href="#_8">替换</a></li>
+        
+            <li><a class="toctree-l3" href="#_9">大小写</a></li>
+        
+            <li><a class="toctree-l3" href="#_10">多窗口操作</a></li>
+        
+            <li><a class="toctree-l3" href="#_11">多文件编辑</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Vim 练级手册</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>附录：Vim 键位整理</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/vimhandbook/vimhandbook.github.io/edit/master/docs/all-key.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="vim">Vim 键位整理</h1>
+<p>如果你是初学者，我是不建议你直接看这一章节的，因为实在太多了，你会乱的。但是如果你已经用了很久 Vim，偶尔想看看以前没记牢的或者想看看哪些不知道的键位，一点一点翻以前的课程又会很浪费时间，所以我放出了这个章节，将所有的键位整理起来，以便查阅。</p>
+<p>整理进度跟本书更新进度齐平。</p>
+<ul>
+<li><code>&lt;space&gt;</code> 空格键</li>
+<li><code>&lt;cr&gt;</code> 回车</li>
+<li><code>&lt;c-f&gt;</code> 表示 <code>&lt;ctrl&gt;</code> 和 <code>f</code> 的组合键</li>
+</ul>
+<h2 id="_1">写入、保存、退出</h2>
+<pre><code class="vim">:q[uit]                 &quot; 退出
+:q!                     &quot; 强制退出
+:w[rite]                &quot; 保存
+:w!                     &quot; 强制保存，能不能保存成功取决于用户对文件的权限
+:w ! sudo tee %         &quot; 如果没有权限保存，试试这个命令
+ZZ                      &quot; 两个大写的 Z，没有修改直接退出，有修改保存后退出
+
+:w newfilename          &quot; 另存为新文件
+:1, 10 w newfilename    &quot; 将 1 到 10 行的内容另存为新文件
+:1, 10 w &gt;&gt; filename    &quot; 将 1 到 10 行的内容另存为新文件
+:r filename             &quot; 将目标文件的内容追加到当前光标下一行
+:3 r filename           &quot; 将目标文件的内容追加到第 3 行一下
+
+:! ls                   &quot; 暂时离开 Vim 查看当前目录的文件，回车后返回 Vim
+</code></pre>
+
+<h2 id="_2">光标移动</h2>
+<pre><code class="vim">h           &quot; 方向键 ←
+j           &quot; 方向键 ↓
+k           &quot; 方向键 ↑
+l           &quot; 方向键 →
+
+0           &quot; 移动到行首
+$           &quot; 移动到行尾的回车符
+g_          &quot; 移动到行尾最后一个非空字符
+gg          &quot; 移动到第一行
+G           &quot; 移动到最后一行&quot;
+
+w           &quot; 移动到下一个单词开头
+e           &quot; 移动到单词的结尾
+b           &quot; 移动到单词的开头
+
+&quot; 不常用
+nh          &quot; 向左移动 n 格，n 为数字
+nl          &quot; 向右移动 n 格
+nj          &quot; 向下移动 n 行
+nk          &quot; 向上移动 n 行
+n&lt;space&gt;    &quot; 向右移动 n 格，同 nl
+
+H           &quot; 移动到当前屏幕第一行的第一个字符
+M           &quot; 移动到当前屏幕中间行的第一个字符
+L           &quot; 移动到当前屏幕最后一行的第一个字符
++           &quot; 移动到非空白字符的下一行
+-           &quot; 移动到非空白字符的上一行
+
+:n&lt;cr&gt;      &quot; 跳转到第 n 行
+</code></pre>
+
+<h2 id="_3">翻页</h2>
+<pre><code class="vim">&lt;c-f&gt;   &quot; 向下移动一页
+&lt;c-d&gt;   &quot; 向下移动半页
+&lt;c-b&gt;   &quot; 向上移动一页
+&lt;c-u&gt;   &quot; 向上移动半页
+</code></pre>
+
+<h2 id="_4">查找与替换</h2>
+<pre><code class="vim">/word   &quot; 从光标位置向下搜索 word 单词
+?word   &quot; 从光标位置向上搜索 word 单词
+n       &quot; 英文字母 n，根据 / 或 ? 搜索的方向定位到下一个匹配目标
+N       &quot; 与 n 相反，定位匹配目标
+
+:n1,n2s/word1/word2/g   &quot; n1, n2 表示数字，替换 n1 行到 n2 行的单词
+:1,$s/word1/word2/g     &quot; 全文替换，也可以写成 :%s/word1/word2/g
+:1,$s/word1/word2/gc    &quot; 全文替换，并出现确认提示
+</code></pre>
+
+<h2 id="_5">复制、粘贴、删除</h2>
+<pre><code class="vim">x           &quot; 向后删除一个字符
+nx          &quot; 向后删除 n 个字符
+X           &quot; 向前删除一个字符
+nX          &quot; 向前删除 n 个字符
+
+dd          &quot; 删除当前行
+ndd         &quot; 向下删除 n 行
+d1G / dgg   &quot; 删除第一行到当前行的数据
+dG          &quot; 删除当前行到最后一行的数据
+d$          &quot; 删除当前字符到行尾
+D           &quot; 删除当前字符到行尾
+d0          &quot; 从行首删除到当前字符
+
+yy          &quot; 复制当前行
+Y           &quot; 复制当前行
+nyy         &quot; 从当前行开始复制 n 行
+y1G / ygg   &quot; 从第一行复制到当前行
+yG          &quot; 从当前行复制到最后一行
+y0          &quot; 从行首复制到当前字符
+y$          &quot; 从当前字符复制到行尾
+
+p, P        &quot; 黏贴，p 黏贴到光标下一行，P 黏贴到光标上一行
+yyp         &quot; 复制并粘贴
+ddp         &quot; 删除并粘贴，相当于下移当前行
+
+
+&quot;+y         &quot; 复制本文到系统剪切板
+&quot;+p         &quot; 粘贴系统剪切板到 Vim（不会影响文本格式）
+</code></pre>
+
+<h2 id="_6">插入</h2>
+<pre><code class="vim">i   &quot; 在光标前进入 insert 模式
+I   &quot; 在当前行左边第一个非空字符前进入 insert 模式，类似其他编辑器的 &lt;c-a&gt; 快捷键
+a   &quot; 在光标后进入 insert 模式
+A   &quot; 在当前行右边第一个非空字符前进入 insert 模式，类似其他编辑器的 &lt;c-e&gt; 快捷键
+o   &quot; 在光标的下一行插入
+O   &quot; 在光标的上一行插入
+s   &quot; 删除当前字符，并进入 insert 模式
+S   &quot; 删除当前行，并进入插入模式
+
+vc  &quot; 删除当前字符，并进入 insert 模式
+cc  &quot; 删除当前行，并进入插入模式
+c0  &quot; 删除光标位置到行首，并进入 insert 模式
+cg_ &quot; 删除光标位置到行尾最后一个非空字符，并进入 insert 模式
+ce  &quot; 删除光标位置到单词末尾，并进入 insert 模式
+cw  &quot; 删除光标位置到单词末尾，并进入 insert 模式
+ciw &quot; 删除当前单词，并进入 insert 模式
+cip &quot; 删除整个段落，并进入 insert 模式
+ci( &quot; 删除当前括号内的内容，并进入 insert 模式 适用于 ([{&lt;'` 等所有成对的标签
+
+</code></pre>
+
+<h2 id="_7">撤销重做</h2>
+<pre><code class="vim">u       &quot; 撤销
+&lt;c-r&gt;   &quot; 重做
+.       &quot; 重复完成操作
+</code></pre>
+
+<h2 id="_8">替换</h2>
+<pre><code class="vim">r   &quot; 替换单个字符，自动返回 normal 模式
+R   &quot; 连续替换多个字符，手动 &lt;esc&gt; 返回 normal 模式
+</code></pre>
+
+<h2 id="_9">大小写</h2>
+<pre><code class="vim">~       &quot; 当前字符大小写反转
+g~~     &quot; 正行字符大小写反转
+vu      &quot; 当前字符小写
+vU      &quot; 当前字符大写
+vU      &quot; 当前字符大写
+viwu    &quot; 当前字符小写
+viwU    &quot; 当前字符大写
+ggguG   &quot; 文本所有字符小写
+gggUG   &quot; 文本所有字符大写
+
+:%s/\&lt;./\u&amp;/g       &quot; 将所有单词首字母大写（需要使用 :nohls 去掉高亮）
+:%s/\&lt;./\l&amp;/g       &quot; 将所有单词首字母小写
+:%s/.*/\u&amp;          &quot; 将每行第一个字母大写
+:%s/.*/\l&amp;          &quot; 将每行第一个字母小写
+</code></pre>
+
+<h2 id="_10">多窗口操作</h2>
+<pre><code class="vim">:sp filename        &quot; 上下分割窗口
+:vs[p] filename     &quot; 左右分割窗口
+
+&lt;c-w&gt;h[j[k[l]]]     &quot; 根据方向键移动光标到该方向的窗口上
+
+&lt;c-w&gt;[N]&gt;           &quot; N 位数字，可选，增加当前窗口 N 列宽&quot;
+&lt;c-w&gt;[N]&lt;           &quot; N 位数字，可选，减少当前窗口 N 列宽&quot;
+&lt;c-w&gt;[N]+           &quot; N 位数字，可选，增加当前窗口 N 行高&quot;
+&lt;c-w&gt;[N]-           &quot; N 位数字，可选，减少当前窗口 N 行高&quot;
+&lt;c-w&gt;=              &quot; 将所有窗口设置等宽高
+
+&lt;c-w&gt;[N]n           &quot; N 位数字，可选，打开一个新窗口 N 行高，默认为整个窗口的一半&quot;
+&lt;c-w&gt;[N]s           &quot; N 位数字，可选，将当前窗口垂直分割为上下两个窗口展示&quot;
+                    &quot; 新窗口可以为 N 行高，默认为整个窗口的一半&quot;
+                    &quot; 类似于 :sp current_file&quot;
+&lt;c-w&gt;[N]v           &quot; N 位数字，可选，将当前窗口水平分割为左右两个窗口展示&quot;
+                    &quot; 新窗口可以为 N 列宽，默认为整个窗口的一半&quot;
+                    &quot; 类似于 :vs current_file&quot;
+
+
+&lt;c-w&gt;o              &quot; 关闭除当前窗口外的所有窗口
+
+&lt;c-w&gt;r              &quot; 顺时针转动窗口
+&lt;c-w&gt;R              &quot; 逆时针转动窗口
+&lt;c-w&gt;x              &quot; 对调左右或上下两个对应的窗口
+
+&lt;c-w&gt;q              &quot; 退出窗口
+:q                  &quot; 退出窗口
+</code></pre>
+
+<h2 id="_11">多文件编辑</h2>
+<pre><code class="vim">vim file1 file2     &quot; 同时打开两个文件
+
+:files              &quot; 查看现在编辑的文件列表，%a 代表正在操作哪个文件
+  1 %a   &quot;file1&quot;                        line 1
+  2      &quot;file2&quot;                        line 0
+
+:n                  &quot; 跳到下一个文件，这里的 n 就是字母
+:N                  &quot; 跳到上一个文件
+</code></pre>
+
+<p>2018-04-17 发布</p>
+<!-- 2018-04-17 最后修改 -->
+
+<!-- - [130+VIM基本命令](http://www.wklken.me/posts/2013/08/17/130-essential-vim-commands.html) -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../mapping/" class="btn btn-neutral" title="Mapping 映射"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/vimhandbook/vimhandbook.github.io/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../mapping/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

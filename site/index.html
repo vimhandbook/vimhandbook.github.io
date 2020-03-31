@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>前言 - Vim 练级手册</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u524d\u8a00";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Vim 练级手册</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">前言</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#vim">Vim 练级手册</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_1">为什么写这本书</a></li>
+        
+            <li><a class="toctree-l3" href="#_2">我是怎样学的</a></li>
+        
+            <li><a class="toctree-l3" href="#_3">版权许可</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="get_started/">开始</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="key-position/">键位操作</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="mode/">常用模式</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="vimrc/">vimrc 配置文件</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="advanced-key-position/">高级键位</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="vimgrep/">vimgrep 全局搜索</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="abbreviations/">Abbreviations 快速输入</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="mapping/">Mapping 映射</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="all-key/">附录：Vim 键位整理</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Vim 练级手册</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>前言</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/vimhandbook/vimhandbook.github.io/edit/master/docs/index.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="vim">Vim 练级手册</h1>
+<p>《Vim 练级手册》一书是本开源的 Vim 教程，尽我所能的介绍 Vim 的相关知识</p>
+<p>去年的 8 月份，我搭建了自己的博客（https://wxnacy.com），同时我开始第 N 次的学习 Vim，并开始作为主编辑器使用。</p>
+<h2 id="_1">为什么写这本书</h2>
+<p>在我的博客中，Vim 相关的内容只占了总数的 1/10 左右，然后总站的访问量却占到了 1/4 到 1/3 的样子，这些都是统计的 Google 搜索来的访问量，所以我有理由相信在程序员中有相当一批人是喜欢 Vim，并坚持在用 Vim 编辑的。这不禁让我想起当初我学习的痛苦，中文的 Vim 资料其实很少，我在博客中总结了很多 Vim 的知识，但我还觉的很零散，一种反哺的心态，让我决心好好的梳理下学习 Vim 的过程，让更多的人看到，并开始或者更简单的使用 Vim。</p>
+<p>之所以说我是第 N 次学习，是因为在过去的几年里，我数次想要使用这个装逼神器，但每次都因为太难而却步。无奈 Vim 的学习曲线简直逆天，满屏幕的找光标，每次退出 Vim 都会莫名其妙的报错，然后伴随当、当、当的报警声，想砸键盘有木有。</p>
+<p>但我心里一直放不下它，不只是只需要舞动键盘就可以完成所有操作的那种酷炫感，每次修改服务器上的文件，都要先复制到本地，改完后在同步上去的步骤真的很让人崩溃。</p>
+<h2 id="_2">我是怎样学的</h2>
+<p>在系统学习完 Python 后，我在日常浏览鸟哥的私房菜时又看到了关于 Vim 的基础教程，接下来就是它了，这次一定要死磕到底。</p>
+<p>随后我忍着心中的烦躁，一个键位一个键位的练习和记忆，当时我突然有一种想法，我要把主编辑器换成 Vim，在经过一早晨的思考后，我的得出的结论是这样的，<strong>以前经常半途而废，是因为我生活中不会经常用到它，只是“偶尔装逼”，这样的练习量太少了，遇到难处理的操作我就换成其他编辑器，这样的思想导致我不会真的花功夫去熟悉它，这样一来，半途而废，也是理所当然的</strong></p>
+<p>这个想法在当时很大胆，因为当时正好赶上项目上线，有很多的工作需要很短的时间完成，这样做的结果是，我不得不花了比平常更多的时间来完成工作，那段时间真的很痛苦，摒弃了用了几年的 IDE，在 Vim 上开发简直是不知所措，很多时候我都要愣在那里想半天接下来该按哪个键。</p>
+<p>杰夫·科尔文在《天才源自刻意练习》一书中是这样定义<strong>刻意练习</strong>的</p>
+<blockquote>
+<p>刻意练习不是去做那些自己得心应手的事情，而是去寻找那些我们不擅长的事情。我们要找出那些自己觉得痛苦艰难却能促使我们不断进步的事情，然后不断重复这些事情。每次重复之后，我们都要强迫自己看到或让别人告知自己哪里没有做好，然后继续重复其中最痛苦艰难的部分。我们继续这个过程，直到身心俱疲。</p>
+</blockquote>
+<p>以前我并不知道刻意练习的这个名词，但是现在看到这句话时却感受颇深，自我决心使用 Vim 并不断的练习后，我就越来越得心应手，至此我的所有开发工作，我的博客和这本书都是在 Vim 中编辑完成的，并且中途完全没有因为更换语言就想要更换编辑器的想法，因为看到别人在笨拙的一手使用鼠标操作光标，然后选中删除输入的过程，我心里想的都是，太慢了，太慢了。</p>
+<p>如果你看到这里，可能你也开始想要了解 Vim，或者你想更好的使用 Vim，但不管怎么样，跟着我开始练级吧。</p>
+<p>本书以连载的形式发布，自发布起每周一章。</p>
+<!-- 关于本书的电子版主题，开始我是想自己写一版的，但是估算了下工作量，感觉有些得不偿失，就偷懒使用了[阮一峰](http://www.ruanyifeng.com/home.html)先生在 [ECMAScript 6 入门](http://es6.ruanyifeng.com/)一书中使用的框架，特此署名。 -->
+
+<h2 id="_3">版权许可</h2>
+<p>本书采用“保持署名—非商用”创意共享4.0许可证。</p>
+<p>只要保持原作者署名和非商用，您可以自由地阅读、分享、修改本书。</p>
+<p>详细的法律条文请参见<a href="https://creativecommons.org/licenses/by-nc/4.0/">创意共享网站</a>。</p>
+<p>2018-04-06 发布</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="get_started/" class="btn btn-neutral float-right" title="开始">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/vimhandbook/vimhandbook.github.io/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+        <span style="margin-left: 15px"><a href="get_started/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-05-19 23:59:07
+-->

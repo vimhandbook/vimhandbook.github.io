@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>常用模式 - Vim 练级手册</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u5e38\u7528\u6a21\u5f0f";
+    var mkdocs_page_input_path = "mode.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Vim 练级手册</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">前言</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../get_started/">开始</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../key-position/">键位操作</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">常用模式</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#_1">常用模式</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#normal">normal 模式</a></li>
+        
+            <li><a class="toctree-l3" href="#insert">insert 模式</a></li>
+        
+            <li><a class="toctree-l3" href="#visual">visual 模式</a></li>
+        
+            <li><a class="toctree-l3" href="#command">command 模式</a></li>
+        
+            <li><a class="toctree-l3" href="#replace">replace 模式</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vimrc/">vimrc 配置文件</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../advanced-key-position/">高级键位</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vimgrep/">vimgrep 全局搜索</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../abbreviations/">Abbreviations 快速输入</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mapping/">Mapping 映射</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../all-key/">附录：Vim 键位整理</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Vim 练级手册</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>常用模式</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/vimhandbook/vimhandbook.github.io/edit/master/docs/mode.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">常用模式</h1>
+<p>前面我们讲到很多模式，<code>insert</code> 模式，<code>normal</code> 模式，你难免会觉得不知所云，该章节我们将着重了解下 Vim 中的常用的几种模式。</p>
+<p>在 Vim 中常用模式如下</p>
+<ul>
+<li><code>normal</code> 模式</li>
+<li><code>insert</code> 模式</li>
+<li><code>visual</code> 模式</li>
+<li><code>command</code> 模式</li>
+<li><code>replace</code> 模式</li>
+</ul>
+<h2 id="normal">normal 模式</h2>
+<p>当我们使用 <code>vim</code> 进入 Vim 编辑器时，默认就是 <code>normal</code> 模式。</p>
+<p>我们大部分时间都呆在该模式下，该模式下，我们几乎可以做除了插入数据以外的任何操作，其中一部分就是上一章我们讲到的那些。</p>
+<p>一般情况下，我们都是从 <code>normal</code> 模式去到其他的模式进行操作，如果想回来，那就按 <code>&lt;esc&gt;</code> 键，有时候你可能会搞不清楚现在在哪个模式下，多按几下 <code>&lt;esc&gt;</code> 返回 <code>normal</code> 模式总是没有错的。因为接下讲到的其他模式都是从 <code>normal</code> 模式进入的。</p>
+<h2 id="insert">insert 模式</h2>
+<p>跟 <code>normal</code> 交互最频繁的就是 <code>insert</code> 模式，不管我们的光标移动多灵活，最终目的就是去往该去的地方，然后插入数据。</p>
+<p>在该模式下，我们可以像其他 IDE 一样，输入所有我们需要输入的信息。</p>
+<p>在该模式下，光标移动不会很方便，默认情况下只能通过键盘方向键和鼠标来移动。所以才需要返回 <code>normal</code> 模式移动光标，再进入 <code>insert</code> 模式，如此往复，开始你会觉得很别扭，经常按错键，但是练熟以后你会爱上它的，因为 <code>normal</code> 模式下操作真的很方便。不过在 <code>insert</code> 模式中也想手不离开键盘中心区，就进行短距离的移动也不是不可以，不过需要配置一下我们的 Vim 编辑器，当然，这是后话，以后我再介绍。</p>
+<p>进入 <code>insert</code> 模式有很多种方式，除了最常用的 <code>i</code> 还有如下方式</p>
+<pre><code class="vim">i   &quot; 在光标前进入 insert 模式
+I   &quot; 在当前行左边第一个非空字符前进入 insert 模式，类似其他编辑器的 &lt;c-a&gt; 快捷键
+a   &quot; 在光标后进入 insert 模式
+A   &quot; 在当前行右边第一个非空字符前进入 insert 模式，类似其他编辑器的 &lt;c-e&gt; 快捷键
+o   &quot; 在光标的下一行插入
+O   &quot; 在光标的上一行插入
+s   &quot; 删除当前字符，并进入 insert 模式&quot;
+S   &quot; 删除当前行，并进入插入模式
+cc  &quot; 删除当前行，并进入插入模式
+</code></pre>
+
+<p>这就已经很多了，对吧。但是除了这些“循规蹈矩”的操作外，还有很多更方便，更有趣的键位，比如 <code>c</code> 键，就可以引申出许多高效的插入方式，但是不要贪多，我们慢慢学。</p>
+<p>现在你应该立马练习起来，把每个键位先尝试一下，然后忘掉几个，只先频繁使用几个你最常用的方式，我建议先从 <code>i, a, o, cc</code> 开始，你觉得？</p>
+<h2 id="visual">visual 模式</h2>
+<p><code>visual</code> 模式之前我们没有提过，它的使用频率仅此于前面两位。</p>
+<p>使用 <code>v</code> 可以进入 <code>visual</code> 模式，先举个例子，使用之前下载的 <code>Object.java</code> 练习</p>
+<p><strong>（1）编辑 Object.java</strong></p>
+<pre><code class="bash">$ vim Object.java
+</code></pre>
+
+<p><strong>（2）移动光标到第 3 行 DO 的 D 字母上</strong></p>
+<pre><code class="vim">jjlll
+</code></pre>
+
+<p><strong>（3）进入 visual 模式，并选中单词</strong></p>
+<pre><code class="vim">vl
+</code></pre>
+
+<p><strong>（4）复制粘贴</strong></p>
+<pre><code class="vim">yp
+</code></pre>
+
+<p>你会得到 <code>DDOO</code> 这样的结果，我们完成了选中指定单词、复制、粘贴的操作。</p>
+<p><code>visual</code> 模式简单来说，是选中一些字符，是指进入一个“块”中，我们可以对这个块进行删除、复制等简单或复杂的操作</p>
+<p>进入 <code>visual</code> 模式后，我们可以使用上一章讲到的所有移动光标的操作来扩大“块”的范围，比如</p>
+<p><strong>全选</strong></p>
+<pre><code class="vim">ggvG
+</code></pre>
+
+<p><strong>选中光标到行尾最后一个非空字符</strong></p>
+<pre><code class="vim">vg_
+</code></pre>
+
+<p>这里我们说下 <code>g_</code> 和 <code>$</code> 区别，如果你在相同的位置分别进行 <code>v$yp</code> 和 <code>vg_yp</code> 两个操作，你会发现，前者在粘贴完复制的内容后会换行，后者则不会，因为 <code>v$</code> 将行尾的回车符也覆盖了进去，通过选中的范围你也可以看到区别，在大多数情况下，这都不是我们想要的，所以这一点是需要注意的。</p>
+<p>有三种方式可以进入 <code>visual</code> 模式</p>
+<pre><code class="vim">v       &quot; 选中当前字符，并进入 visual 模式，随着光标的游走来选中字符
+V       &quot; 选中当前行，并进入 visual 模式，随着光标的上下移动整行选中字符
+&lt;c-v&gt;   &quot; 选中当前字符，并进去 visual 模式，随着光标的移动以长方形的模式选中字符
+</code></pre>
+
+<p>第三种方式在批量操作文本时很有用，以后我们会重点讲这个功能。</p>
+<h2 id="command">command 模式</h2>
+<p><code>command</code> 模式顾名思义就是命令行模式，该模式下可以执行保存推出、分割窗口、插件管理等命令。</p>
+<p>按下 <code>:</code> 进入 <code>command</code> 模式，输入命令后回车 <code>&lt;cr&gt;</code> 生效。举个例子，假设一个场景，我们在编辑一个新文件时，需要使用另一个文件的内容，想对照着内容来写，反复的推出进入肯定不是我们想要的，开两个客户端也不是个好办法，这时我们需要使用分割窗口的功能。</p>
+<p><strong>（1）先打开一个新文本</strong></p>
+<pre><code class="bash">$ vim newfile
+</code></pre>
+
+<p><strong>（2）分割窗口</strong></p>
+<pre><code class="vim">:vsp Object.java
+</code></pre>
+
+<p>此时，你会看到窗口被垂直分割为左右两个界面，左边是新打开的文件</p>
+<p><strong>（3）文件间移动光标</strong></p>
+<p>这个操作会稍微复杂点，<code>&lt;c-w&gt; + 方向键</code>，就是在按住 <code>&lt;ctrl&gt;</code> 和 <code>w</code> 的同时再按下 <code>h</code> 或 <code>l</code></p>
+<pre><code class="vim">&lt;c-w&gt;l
+</code></pre>
+
+<p>打开新文件后，光标默认在后打开的文件中，按照上边的操作可以把光标移动到我们想要编辑的文本中，你可以使用左右方向键反复操作几次，这是我们第一次使用三个键位完成工作，需要多练习几次。</p>
+<p>该模式下的其他操作，都是在高级功能中频繁用到的，后期我们会着重讲解。</p>
+<h2 id="replace">replace 模式</h2>
+<p><code>replace</code> 模式的使用频率相对较少，主要在替换单个或连续多个字符时使用。</p>
+<p>将光标移动到想要替换的字符上，按下 <code>r</code> 进入 <code>replace</code> 模式，然后按下按下任意字符，此时你会看到字符已经替换成功，并且自动返回 <code>normal</code> 模式。</p>
+<p>如果你想要连续替换多个字符，需要使用 <code>R</code>，比如有一个单词 <code>code</code>，我们将光标移动到 <code>c</code> 上，然后按下 <code>R</code>，随后键入 <code>name</code>，你会发现整个单词被替换过来，并且现在仍然停留在 <code>replace</code> 模式下，需要按下 <code>&lt;esc&gt;</code> 才会返回 <code>normal</code> 模式</p>
+<pre><code class="vim">r   &quot; 替换单个字符，自动返回 normal 模式
+R   &quot; 连续替换多个字符，手动 &lt;esc&gt; 返回 normal 模式
+</code></pre>
+
+<p>该模式在使用得当的情况下，会让开发非常有效率，同样的，我们需要多加练习才行。</p>
+<p>现在我们讲的这么多模式，并不是让你全到牢记，你难免会迷糊，没有关系，现在你只需要大概了解有这么个东西，后面我们会经常用到这些名词，看得多了也就熟了。</p>
+<p>2018-04-08 发布</p>
+<p>2018-04-11 最后修改</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../vimrc/" class="btn btn-neutral float-right" title="vimrc 配置文件">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../key-position/" class="btn btn-neutral" title="键位操作"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/vimhandbook/vimhandbook.github.io/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../key-position/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../vimrc/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

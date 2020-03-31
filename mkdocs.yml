@@ -1,0 +1,17 @@
+site_name: Vim 练级手册
+site_description: 《Vim 练级手册》一书是本开源的 Vim 教程，尽我所能的介绍 Vim 的相关知识
+site_author: Wxnacy
+repo_url: https://github.com/vimhandbook/vimhandbook.github.io
+nav:
+    - 前言: index.md
+    - 开始: get_started.md
+    - 键位操作: key-position.md
+    - 常用模式: mode.md
+    - vimrc 配置文件: vimrc.md
+    - 高级键位: advanced-key-position.md
+    - vimgrep 全局搜索: vimgrep.md
+    - Abbreviations 快速输入: abbreviations.md
+    - Mapping 映射: mapping.md
+    - 附录：Vim 键位整理: all-key.md
+
+theme: readthedocs

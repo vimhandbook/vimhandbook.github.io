@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>高级键位 - Vim 练级手册</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u9ad8\u7ea7\u952e\u4f4d";
+    var mkdocs_page_input_path = "advanced-key-position.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Vim 练级手册</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">前言</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../get_started/">开始</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../key-position/">键位操作</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mode/">常用模式</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vimrc/">vimrc 配置文件</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">高级键位</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#_1">高级键位</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_2">保存退出</a></li>
+        
+            <li><a class="toctree-l3" href="#_3">打开文件警告</a></li>
+        
+            <li><a class="toctree-l3" href="#_4">多窗口操作</a></li>
+        
+            <li><a class="toctree-l3" href="#_5">多文件编辑</a></li>
+        
+            <li><a class="toctree-l3" href="#c">c 的使用</a></li>
+        
+            <li><a class="toctree-l3" href="#_6">宏</a></li>
+        
+            <li><a class="toctree-l3" href="#_7">块批量操作</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vimgrep/">vimgrep 全局搜索</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../abbreviations/">Abbreviations 快速输入</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mapping/">Mapping 映射</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../all-key/">附录：Vim 键位整理</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Vim 练级手册</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>高级键位</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/vimhandbook/vimhandbook.github.io/edit/master/docs/advanced-key-position.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">高级键位</h1>
+<p>经过前面几章的洗礼，相信你已经对 Vim 有了一个全面的了解，你会发现它不像你想象中的那样难用。现阶段你仍然不会觉得它的好，除了适应的问题外，更多原因是我们需要学习的东西还很多，这一章节除了补充些常用知识外，主要会介绍几个“绝活”让编辑文档更简单。你要做好准备，因为这一章又是需要多练习的一章。</p>
+<h2 id="_2">保存退出</h2>
+<p>第一章中我们简单说明保存退出的按键，但是还有很多情况是 <code>:wq</code> 处理不了的</p>
+<p><strong>直接退出</strong></p>
+<pre><code class="vim">ZZ
+</code></pre>
+
+<p>就是两个大写的 <code>Z</code>，如果没有修改文件直接退出，如果有修改则保存后退出。有点太直接了，说实话并不常用，保存退出很多时候还是小心操作的好。</p>
+<p><strong>强制退出</strong></p>
+<p>如果你修改了写东西，突然不想保存，直接退出是会报错的</p>
+<pre><code class="bash">E37: No write since last change (add ! to override)
+</code></pre>
+
+<p>通过提示可以看出，最后的修改没有保存，需要使用 <code>!</code> 强制退出。</p>
+<pre><code class="vim">:q!
+</code></pre>
+
+<p><strong>强制保存</strong></p>
+<p>你应该能很自然的想到强制保存也是加上 <code>!</code></p>
+<pre><code class="vim">:w!
+</code></pre>
+
+<p>没错，<code>!</code> 在 Vim 就是有强制的意思，但是最后能不能保存成功还是要看当前用户对应该文件的权限，所以在 Linux 上编辑文件尽量使用 <code>sudo</code> 打开文件。</p>
+<pre><code class="bash">$ sudo vim Object.java
+</code></pre>
+
+<p>不过话说回来，假如我忘记了权限的问题，又做了大量的修改，难道要让我放弃掉吗？当然有办法解决。</p>
+<pre><code class="vim">:w ! sudo tee %
+</code></pre>
+
+<p>通过该命令可以强制在 Vim 中使用 <code>sudo</code> 权限保存</p>
+<p><strong>另存为</strong></p>
+<p>看到这个名称你肯定很熟悉，任何编辑器左上角打开“编辑”按钮都会有这个功能，Vim 的要更方便一点，在保存的后边跟上新文件名即可</p>
+<pre><code class="vim">:w newfilename
+</code></pre>
+
+<p>你也可以只保存某几行数据到新文件，比如 1 到 10 行</p>
+<pre><code class="vim">:1, 10 w newfilename
+</code></pre>
+
+<p>想要追加文件需要加上 <code>&gt;&gt;</code></p>
+<pre><code class="vim">:1, 10 w &gt;&gt; filename
+</code></pre>
+
+<p><strong>写入另一个文件的内容</strong></p>
+<p>如果你在写作的时候，需要将另一个文件的内容直接引用到当前文件，可以试试这个功能</p>
+<pre><code class="vim">:r filename
+</code></pre>
+
+<p>然后目标内容就会粘贴到当前光标一下的位置，你可以指定它追加到某一行的下面。</p>
+<pre><code class="vim">:2 r filename
+</code></pre>
+
+<p><strong>暂时离开 Vim</strong></p>
+<p>假如你想要写入另一个文件的内容，但是忘记了文件名，但是又不想退出文件怎么办，我们有办法可以暂时离开 Vim 环境来执行 shell 命令。</p>
+<pre><code class="vim">:! ls
+</code></pre>
+
+<p>随后你会看到执行命令的结果，然后回车即可返回 Vim，前期我们借助不到插件的帮忙时，这个功能是非常有用的，不过它只能执行非常基础的命令，<code>ll</code> 都会报错。</p>
+<h2 id="_3">打开文件警告</h2>
+<p>我们在用 Vim 编辑文档事，它会自动在文件同目录下生一个 <code>.filename.swp</code> 文件，它是作为一个缓存存在的，记录了你最后的编辑时刻，如果正常关闭，则会自动删除，如果非常关闭，它就会保存下来。在需要找回文件时它是很有用的，不过再次打开原文件时却会有个麻烦的警报。</p>
+<p>下面我们来模拟下非正常退出的场景，再打开 Vim 的情况下，使用 <code>&lt;c-z&gt;</code> 组合键将 Vim 放到后台执行。</p>
+<pre><code class="bash">[1]+  Stopped                 vim Object.java
+</code></pre>
+
+<p>出现上述提示，即为成功，此时已经返回命令行界面，查看文件列表。</p>
+<pre><code class="bash">$ ll -a
+-rw-r--r--  1 root root   26820 Apr 10 21:31 Object.java
+-rw-r--r--  1 root root   40960 Apr 10 21:22 .Object.java.swp
+</code></pre>
+
+<p>我们可以看到 <code>.Object.java.swp</code> 的出现，此时再次打开 <code>Object.java</code> 就会报错。</p>
+<pre><code class="bash">$ vim Object.java
+E325: ATTENTION
+Found a swap file by the name &quot;.Object.java.swp&quot;
+          owned by: root   dated: Tue Apr 10 21:22:24 2018
+         file name: ~root/Object.java
+          modified: no
+         user name: root   host name: iZ2zefuxiq5o2n1epu4h6rZ
+        process ID: 13579 (still running)
+While opening file &quot;Object.java&quot;
+             dated: Tue Apr 10 21:31:51 2018
+      NEWER than swap file!
+
+(1) Another program may be editing the same file.  If this is the case,
+    be careful not to end up with two different instances of the same
+    file when making changes.  Quit, or continue with caution.
+(2) An edit session for this file crashed.
+    If this is the case, use &quot;:recover&quot; or &quot;vim -r Object.java&quot;
+    to recover the changes (see &quot;:help recovery&quot;).
+    If you did this already, delete the swap file &quot;.Object.java.swp&quot;
+    to avoid this message.
+
+Swap file &quot;.Object.java.swp&quot; already exists!
+[O]pen Read-Only, (E)dit anyway, (R)ecover, (Q)uit, (A)bort:
+</code></pre>
+
+<p>这个错误第一次看会很乱，我们只看最后两行。</p>
+<pre><code class="bash">Swap file &quot;.Object.java.swp&quot; already exists!
+[O]pen Read-Only, (E)dit anyway, (R)ecover, (Q)uit, (A)bort:
+</code></pre>
+
+<p>缓存文件已经存在，问我们想要怎么办，下面的五种提示使用首字母可以进行相应操作，它们的意思分别为</p>
+<ul>
+<li><code>[O]pen Read-Only</code> 我不管，我不管，就要继续打开文件。但此时打开的是只读文件，这种情况我们可以使用上边讲到的强制保存来写入文件，但是如果这是其他人正在打开的文件，看看就退出好了。</li>
+<li><code>(E)dit anyway</code> 依然不管，继续修改文件。此次修改过后需要记得删除 <code>.swp</code> 文件，不然下次还会出现。</li>
+<li><code>(R)ecover</code> 使用之前的缓存进行覆盖。同样 <code>.swp</code> 文件要手动删除。</li>
+<li><code>(Q)uit</code> Ok，知道有问题，我退出。然后手动删除 <code>.swp</code> 文件再进来，一般都会这样操作。</li>
+<li><code>(A)bort</code> 跟 <code>q</code> 一个意思，也是退出。</li>
+<li><code>(D)elete it</code> 多出来这个操作，是在异常退出 <code>Terminal</code> 后出现，你肯定会有机会碰到。它就是直接删除 <code>.swp</code> 的意思，只要你确保缓存没有用了。</li>
+</ul>
+<p>倘若你在没有删除 <code>.swp</code> 文件的情况下，再次异常退出了 Vim，那当前目录就会生成一个最新的缓存文件 <code>.swo</code> 后缀，如此往复会继续生成 <code>.swn</code> 文件，你了解这个事情就好。</p>
+<h2 id="_4">多窗口操作</h2>
+<p>在《常用模式》章节中，我们简单了解过多窗口操作，还记得吧。</p>
+<p>在我的工作中，多窗口操作使用非常频繁，他真的非常方便。</p>
+<p>在《键位操作》章节中，我们提到 <code>yy</code> 只在当前缓存区生效，跨文件复制数据就是个问题，但是在多窗口中这个问题可以得到解决，他们同属一个缓存区。</p>
+<p><strong>分割窗口</strong></p>
+<pre><code class="vim">:sp filename    &quot; 上下分割窗口
+:vsp filename   &quot; 左右分割窗口
+</code></pre>
+
+<p><code>:vsp</code> 分割方式更有用一些，因为如果你开发的时候严格按照每行最多 79 个字符的话，左右分屏刚好可以在不遮挡代码的情况下，对照编辑。</p>
+<p><strong>移动光标</strong></p>
+<p>使用组合键 <code>&lt;c-w&gt;</code> 再加上 <code>h, j, k, l</code> 任意一个方向键，就可以将光标移动到对应方向的窗口上。</p>
+<pre><code class="vim">&lt;c-w&gt;h[j[k[l]]]     &quot; 根据方向键移动光标到该方向的窗口上
+</code></pre>
+
+<p><strong>调换窗口位置</strong></p>
+<p>在你分窗口时，可能默认的位置并不是你想要的，这时候需要手动调换下位置。</p>
+<pre><code class="vim">&lt;c-w&gt;x      &quot; 对调左右或上下两个对应的窗口
+</code></pre>
+
+<p>必须是对应的两个窗口，如果左边一个，右边上下两个，那左右就不能调换。另外还有 <code>&lt;c-w&gt;r</code> <code>&lt;c-w&gt;R</code> 两个命令，分别为顺时针和逆时针调换窗口，现在的实验效果跟 <code>&lt;c-w&gt;x</code> 效果差不多，所以可以不用记忆。</p>
+<p><strong>退出窗口</strong></p>
+<pre><code class="vim">&lt;c-w&gt;q
+</code></pre>
+
+<p>每次用这个键，我都会感觉很蛋疼，他们的位置太近了，操作极其不方便，所以我干脆使用 <code>:q</code> 退出</p>
+<h2 id="_5">多文件编辑</h2>
+<p>你是不是一直都在用 Vim 打开单个文件，其实他也可以像其他 IDE 一样同时打开多个文件。</p>
+<p><strong>打开多文件</strong></p>
+<pre><code class="bash">$ cp Object.java Object.java.copy
+$ vim Object.java Object.java.copy
+</code></pre>
+
+<p><strong>查看打开的文件列表</strong></p>
+<pre><code class="vim">:files
+</code></pre>
+
+<pre><code class="vim">  1 %a   &quot;Object.java&quot;                  line 1
+  2      &quot;Object.java.copy&quot;             line 0
+</code></pre>
+
+<p>通过列表信息显示，当前打开了两个文件。<code>%a</code> 标识出现在正在编辑的文件。回车返回。</p>
+<p><strong>文件跳转</strong></p>
+<pre><code class="vim">:n      &quot; 跳到下一个文件
+:N      &quot; 跳到上一个文件
+</code></pre>
+
+<p>这里有点不太方便，你可能会想着使用 <code>:1</code> <code>:2</code> 来跳转文件，但是只会跳到相应的行数。<code>:n</code> 会一直跳到下一个文件，到最后一个文件后，只能使用 <code>:N</code> 往回跳。</p>
+<p>总体来说多文件编辑是有些尴尬的，前期多窗口编辑比它方便，后期也是被各种插件吊打，如果不是要写这个本书，我都快忘了这个操作了，你可以记下来，需要的时候知道怎么用。</p>
+<h2 id="c">c 的使用</h2>
+<p><code>c</code> 在开发届一直都代表着老大的地位，在 Vim 中 <code>c</code> 的频率可以说是相当高。</p>
+<p>在《常用模式》章节中，我们介绍过 <code>cc</code> 可以删除当前行并进入 <code>insert</code> 模式，<code>c</code> 就是替换的意思，使用它来替换掉你想要修改的地方重新输入。</p>
+<p>只输入 <code>c</code> 是没有效果的，需要加上一下动作</p>
+<pre><code class="vim">cc      &quot; 删除当前行，并进入 insert 模式
+D       &quot; 删除当前行，并进入 insert 模式
+cj      &quot; 删除当前行和下一行，并进入 insert 模式
+c10j    &quot; 删除当前行和下面 10 行，并进入 insert 模式
+</code></pre>
+
+<p>除了这些基础操作，配置上 Operator-Pending 映射简直如虎添翼。</p>
+<pre><code class="vim">ce      &quot; 删除光标到当前单词结尾，并进入 insert 模式
+cw      &quot; 删除光标到当前单词结尾，并进入 insert 模式
+cb      &quot; 删除光标到当前单词开始，并进入 insert 模式
+
+ciw     &quot; 删除当前单词，并进入 insert 模式
+ci(     &quot; 删除光标所在括号的内容，并进入 insert 模式，适用于 {[(&lt;`'&quot; 等成对的符号
+cip     &quot; 删除当前段落，并进入 insert 模式
+ct,     &quot; 删除到下一个逗号，并进入 insert 模式，逗号可以换成所有可输入字符
+</code></pre>
+
+<p>我们先不要管什么叫 Operator-Pending 映射，以后我们会单开一个章节讲它，你只需要先照着用起来就好。</p>
+<p>另外需要知道的是上面所有操作将 <code>c</code> 换成 <code>v, y, d</code> 也可以起到相同的选中、复制和删除的效果。</p>
+<p>这里需要说一下 <code>w, e, b</code> 三个键位，他们可以在行内快速移动光标。</p>
+<pre><code class="vim">w           &quot; 移动到下一个单词开头
+e           &quot; 移动到单词的结尾
+b           &quot; 移动到单词的开头
+</code></pre>
+
+<p>这三个键位配合以前学习的知识，可以更大程度上方便了行内的光标移动。</p>
+<h2 id="_6">宏</h2>
+<p>宏是一个非常有趣的概念，它就像一个录影机一样，将你的所有操作都记录下来，然后再一遍一遍的播放出来。<code>一遍一遍</code>，恩，你想到了什么？</p>
+<p>批量操作，宏可以完成很多你需要一遍一遍有规律的操作。</p>
+<p>举个例子，我想要每行写一个数字，1 到 100，递增写入，如果是正常输入，没人愿意尝试，太受罪了，但是用宏呢？</p>
+<p><strong>打开空文本，第一行写入 1</strong></p>
+<pre><code class="vim">$ vim test
+
+1
+</code></pre>
+
+<p><strong>打开宏</strong></p>
+<pre><code class="vim">qb      &quot; 打开宏录制，左下角会显示 recording @b 字样，&quot;
+</code></pre>
+
+<p>此时左下角会显示 <code>recording @b</code> 字样，代表开始录制，也可以使用 <code>qa</code> <code>qc</code>，第二个字母只是表示录制的名字。</p>
+<p><strong>需要录制的操作</strong></p>
+<pre><code class="vim">yyp     &quot; 首先将 1 复制粘贴到第二行
+&lt;c-a&gt;   &quot; 该组合键可以将数字加一&quot;
+</code></pre>
+
+<p><strong>关闭宏</strong></p>
+<pre><code class="vim">q
+</code></pre>
+
+<p>左下角 <code>recording @b</code> 字样消失，即为成功关闭。</p>
+<p><strong>播放宏</strong></p>
+<pre><code class="vim">@b      &quot; 播放指定宏
+@@      &quot; 重复播放上次的宏
+100@@   &quot; 重复播放 100 上次的宏
+</code></pre>
+
+<p>就这样，刚才让你头疼的操作，眨眼就完成了，不管多么复杂的操作，只要做一遍，剩下的交给它就好了。</p>
+<p>宏的操作非常简单，但是价值可以无限大，关键在于你怎么用它。这非常考验你对基础知识的掌握，你的第一次操作是否可以独立的解决一次问题，是使用宏的关键。</p>
+<h2 id="_7">块批量操作</h2>
+<p>宏可以完成所有可以批量的操作，但是在某些场景下，有一个比他操作更快捷的方式，我叫它块批量操作。</p>
+<p><img alt="vb1" src="https://wxnacy-img.oss-cn-beijing.aliyuncs.com/common/vb1.gif" /></p>
+<p>从这个预览图我做了如下操作</p>
+<ul>
+<li>选中一个块区域，在前面统一加上 <code>kill</code>，然后在后面加上 <code>;</code></li>
+<li>选中这个快区域，复制到系统其它编辑器中</li>
+</ul>
+<p>这是我们在干掉 Mysql 锁死进程时常用的操作。</p>
+<p>可能你会说，我用宏就可以了啊，但是如果有几千行呢，执行几千次的录像操作，光执行动画就要看半天，有点慢。</p>
+<p>使用 <code>&lt;c-v&gt;</code> 矩形块选择加上 <code>A, I</code> 进入插入模式即可</p>
+<pre><code class="bash">23877   root
+23879   root
+23922   root
+23937   root
+23939   root
+23954   root
+23955   root
+23957   root
+23958   root
+23959   root
+23960   root
+</code></pre>
+
+<ul>
+<li><code>&lt;c-v&gt;G0Ikill &lt;esc&gt;</code> 完成在块前面输入 <code>kill</code></li>
+<li><code>ggee&lt;c-v&gt;GeeA;&lt;esc&gt;</code> 完成在块前面输入 <code>;</code></li>
+<li><code>ggeel&lt;c-v&gt;G"+y</code> 完成复制块到系统粘贴板的工作</li>
+</ul>
+<p>这里需要复制的操作</p>
+<pre><code class="vim">&quot;+y     &quot; 复制本文到系统剪切板
+&quot;+p     &quot; 粘贴系统剪切板到 Vim（不会影响文本格式）
+</code></pre>
+
+<p>这两个操作在 Vim 与 系统编辑器交互的时候使用非常多，因为 <code>y, p</code> 是不能与系统的剪切板交互的，只能通过这个组合键，后续我们会着重讲下复制粘贴以及更方便的敲出这几个键。</p>
+<p>2018-04-23 发布</p>
+<!-- 2018-04-12 最后修改 -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../vimgrep/" class="btn btn-neutral float-right" title="vimgrep 全局搜索">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../vimrc/" class="btn btn-neutral" title="vimrc 配置文件"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/vimhandbook/vimhandbook.github.io/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../vimrc/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../vimgrep/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

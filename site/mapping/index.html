@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Mapping 映射 - Vim 练级手册</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Mapping \u6620\u5c04";
+    var mkdocs_page_input_path = "mapping.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Vim 练级手册</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">前言</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../get_started/">开始</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../key-position/">键位操作</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mode/">常用模式</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vimrc/">vimrc 配置文件</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../advanced-key-position/">高级键位</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vimgrep/">vimgrep 全局搜索</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../abbreviations/">Abbreviations 快速输入</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Mapping 映射</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#mapping">Mapping 映射</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_1">简单映射</a></li>
+        
+            <li><a class="toctree-l3" href="#_2">可怕的递归</a></li>
+        
+            <li><a class="toctree-l3" href="#leader">Leader</a></li>
+        
+            <li><a class="toctree-l3" href="#_3">更复杂的映射</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../all-key/">附录：Vim 键位整理</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Vim 练级手册</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Mapping 映射</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/vimhandbook/vimhandbook.github.io/edit/master/docs/mapping.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="mapping">Mapping 映射</h1>
+<p>Vim 的基础按键操作已经可以很好的完成基本编辑工作，然而它还是会不太方便，尤其是熟悉了成熟 IDE 很多人性化设计的人们，曾经的我也是。所幸 Vim 提供了 Mapping 映射可以更好的进行文本操作，甚至比 IDE 更方便。</p>
+<p><img alt="mapping" src="https://wxnacy.com/images/mapping.gif" /></p>
+<p>从预览图中我做了这么几个事情
+- 先输入一个字符串 <code>wxnacy</code> 但是忘记环绕双引号，但是利用映射快速完成双引号环绕
+- 然后快速跳到行首输入 <code>String name =</code> ，再快速跳到行尾输入输入 <code>;</code>
+- 输入语句，并在不跳到行尾的情况下，在行尾插入 <code>;</code>
+- 最后输入一行 <code>=</code> 并快速与上一行替换位置</p>
+<h2 id="_1">简单映射</h2>
+<p>我们先把刚才说的事情放一放，从最简单的开始</p>
+<pre><code class="vim">map - dd
+</code></pre>
+
+<p>你可以在 <code>command</code> 模式中输入这句，然后在文本的某一行中按下 <code>-</code> ，如果你已经按下了，相信你已经明白他的含义，<code>-</code> 映射了 <code>dd</code> 的功能，当然 <code>dd</code> 的功能并没有消失，这样的意义是什么呢，可以输入少，但做的多，我在上一章中提到过，<strong><em>懒是第一生产力</em></strong></p>
+<p>Vim 提供了映射的功能，除了少输入字符外，它可以让我们免受一些“别扭”的按键所折磨，在预览中我们提到了，快速跳到行首行尾来编辑，其实 Vim 的基础操作就有提及，<code>I, A</code> 分别可以完成，然后这样的按键让从其他编辑器跳槽过来的人颇为头疼，因为现在几乎所有的编辑器都可以通过 <code>ctrl + a, ctrl + e</code> 来实现这个功能，就算我强迫自己适应了它的设定，在与其他编辑器切换使用时，这样的区别也会让我很恼火，所以我想改了它</p>
+<pre><code class="vim">nmap &lt;c-a&gt; I
+nmap &lt;c-e&gt; A
+imap &lt;c-a&gt; &lt;esc&gt;I
+imap &lt;c-e&gt; &lt;esc&gt;A
+</code></pre>
+
+<p>按照这样修改你的配置文件，你就可以像其他编辑器一样使用快速跳转行首行尾了，在这里有两个新东西 <code>&lt;c-a&gt;</code> <code>nmap, imap</code> ，我们来看一下。
+- <code>&lt;c-a&gt;</code> 就是 <code>ctrl + a</code> 的组合键，第一个 c 就代表 ctrl
+- Vim 在映射上提供了四个关键词 <code>nmap, imap, vmap, cmap</code> 分别代表了四种使用模式，<code>map</code> 默认为 <code>nmap</code></p>
+<h2 id="_2">可怕的递归</h2>
+<pre><code class="vim">nmap dd jddk
+</code></pre>
+
+<p>试着用一下这个映射，结果发现它只是像按了 <code>G</code> 一样，跳到了最后一行，并没有按照预想的那样，<code>先下移一行，删除，再上移一行</code>。那么问题出在了哪里？</p>
+<p>我们在这里遇到了递归映射，在执行 <code>j</code> 以后遇到 <code>dd</code>，Vim 以为我们又想映射，所以又从 <code>j</code> 开始执行，如此往复，陷入了递归陷阱。当然你会说，尽量避免这种情况就是了，这样好像可以解决眼前的问题，但是却解决不了以后的问题，随着自定义映射越来越多，这样的情况出现几率会越来越高，因为一共也就这么多按键，总有用完的时候，另外你以后肯定记不住那么的映射都用在哪了。所以我们应该用<strong>更好</strong>的方式来解决问题。</p>
+<pre><code class="vim">nnoremap dd jddk
+</code></pre>
+
+<p>再次试用这个映射，现在我们会发现，当按下 <code>dd</code> 的时候已经可以删除下一行了，Vim 提供了<strong>非递归映射</strong>，同时提供了 <code>inoremap, vnoremap, cnoremap</code> 一共四种模式</p>
+<p>不要问什么时候用这种模式，答案很显然，是永远，forver。毕竟我们不能永远惦记着哪些映射可能会触发递归，因为我们的时间和精力应该用在更有意义的事情上。</p>
+<p>相关文档 <code>:help unmap</code></p>
+<h2 id="leader">Leader</h2>
+<p>在解决完递归的问题，我们再来看一种情况，在上个问题中我们使用 <code>dd</code> 来做删除下一行的操作，那删除当前行怎么办，对，我之前提过可以用 <code>-</code> 来映射。但我们不能用这样映射下去，我们需要<strong>更好</strong>的解决方法。</p>
+<pre><code class="vim">nnoremap ;d jddk
+</code></pre>
+
+<p>通过这样的配置，我们并没有多输入字符，但是也达到了同样的效果，并且这样的组合几乎不会在其他地方用到，在 Vim 中我们称 <code>;</code> 这样的“前缀”为 <code>leader</code></p>
+<pre><code class="vim">let mapleader = ';'
+</code></pre>
+
+<p>在 <code>~/.vimrc</code> 中加上这样的配置，可以设置自己的 <code>leader</code> 键，并用 <code>&lt;leader&gt;</code> 来配置映射</p>
+<pre><code class="bash">nnoremap &lt;Leader&gt;d jddk
+</code></pre>
+
+<p>这样做的好处是如果你有一天想改变这个键位，只需要修改一个地方即可，不必在到处查找，并且如果哪天你把自己的配置放到网上供他人使用，别人只需修改成自己喜欢的键位，就可以马上使用。</p>
+<p>更多的资料可以阅读 <code>:help mapleader</code> <code>:help maplocalleader</code></p>
+<h2 id="_3">更复杂的映射</h2>
+<p>现在我们来做一些更复杂的事情，分析一下效果预览中一些操作</p>
+<pre><code class="vim">nnoremap &lt;Leader&gt;&quot; viw&lt;esc&gt;bi&quot;&lt;esc&gt;ea&quot;&lt;esc&gt;
+</code></pre>
+
+<p>这是给单词做环绕括号时的操作，你可以先复制到你的配置中试一下效果，它做了什么呢？
+- 首先 <code>viw</code> 可以选中当前光标所在单词，我们在高级键位章节中简单提到过这个功能，下一章细讲
+- 然后输入 <code>&lt;esc&gt;</code> 退出 <code>visual</code> 模式，<code>b</code> 跳到单词开头，<code>i</code> 进入 <code>insert</code> 模式，输入 <code>"</code>
+- 再次退出 <code>insert</code> 模式，<code>e</code> 跳到单词末尾，<code>a</code> 在末尾进入 <code>insert</code> 模式，输入 <code>"</code> ，最后退出 <code>insert</code> 模式</p>
+<p>如果你把 Vim 当做主编辑器来使用，这样的映射操作会经常发生，所以你需要不断的练习</p>
+<pre><code class="vim">&quot; 在行尾输入分号
+nnoremap &lt;Leader&gt;, mzA;&lt;esc&gt;`z
+&quot; 在正常模式和插入模式快速跳到行首行尾
+nnoremap &lt;C-a&gt; I
+nnoremap &lt;C-e&gt; A
+inoremap &lt;C-a&gt; &lt;esc&gt;I
+inoremap &lt;C-e&gt; &lt;esc&gt;A
+</code></pre>
+
+<p>剩下两个操作我不在进行解释，你可以自己尝试搞明白原理，你可能会发现我没有提及为什么输入 <code>print</code> 后会快速变成 <code>System.out.println("")</code>，因为我们在上一章就讲过了。</p>
+<p>最后提一点，如果你觉得改完键位会很乱的话，可以将原来的键位映射到 <code>&lt;nop&gt;</code> 上，这样原来的键位就会失效，你可以靠这样强迫自己使用新键位。</p>
+<p>2018-06-04 发布</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../all-key/" class="btn btn-neutral float-right" title="附录：Vim 键位整理">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../abbreviations/" class="btn btn-neutral" title="Abbreviations 快速输入"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/vimhandbook/vimhandbook.github.io/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../abbreviations/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../all-key/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

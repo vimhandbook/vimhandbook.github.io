@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>开始 - Vim 练级手册</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u5f00\u59cb";
+    var mkdocs_page_input_path = "get_started.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Vim 练级手册</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">前言</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">开始</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#_1">开始</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#hello-world">Hello World</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../key-position/">键位操作</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mode/">常用模式</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vimrc/">vimrc 配置文件</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../advanced-key-position/">高级键位</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vimgrep/">vimgrep 全局搜索</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../abbreviations/">Abbreviations 快速输入</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mapping/">Mapping 映射</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../all-key/">附录：Vim 键位整理</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Vim 练级手册</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>开始</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/vimhandbook/vimhandbook.github.io/edit/master/docs/get_started.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">开始</h1>
+<p>ok，在正式开始之前，我们先来梳理下，应该从哪入手，在很多教程中我都看到一整页一整页的堆叠快捷键命令，曾经我也这样做过。没错，一般我们使用 vim 不会再用到鼠标，都是用各种复杂的组合键来完成任务，但是有必要一开始就搞的这么高难度？放弃吧，你做不到的，先笨拙的走出第一步再说吧</p>
+<h2 id="hello-world">Hello World</h2>
+<p>看到这个标题，程序员都会会心一笑，不管学什么，先让我们写个 <code>Hello World</code> 吧。</p>
+<p><strong>（1）新建文件 helloworld</strong></p>
+<pre><code class="bash">$ vim helloworld
+</code></pre>
+
+<p>然后我们会进入一个新的界面，并且左下角会有 <code>"helloworld" [New File]</code> 的字样，现在我们在文件中处于 <code>normal</code> 模式下。</p>
+<p>首先声明，现在 <code>helloworld</code> 还并没有保存在硬盘中，我只是“打开”了一个叫 <code>helloworld</code> 的文件。</p>
+<p><strong>（2）输入信息</strong></p>
+<p>按下 <code>i</code> 键进入 <code>insert</code> 模式，左下角会显示 <code>-- INSERT --</code> 的字样，继续输入文字 <code>Hello World</code>，随后按下 <code>&lt;esc&gt;</code>（就是键盘左上角的退出键）返回到 <code>normal</code> 模式，同时你会看到屏幕左下角的变化。</p>
+<p><strong>（3）退出 Vim</strong></p>
+<p>按下 <code>:</code> 键进入 <code>command</code> 模式，输入 <code>w</code> 然后按下回车键，左下角会显示 <code>"helloworld" 1L, 12C written</code> 的字样，代表我们已经把文本保存到硬盘上了，然后再次输入 <code>:q</code> 就会退出编辑器，连续操作也可以输入 <code>:wq</code> 来保存并退出。然后你可以查看刚编辑的文件</p>
+<pre><code class="bash">$ cat helloworld
+
+Hello World
+</code></pre>
+
+<p>先不要管里面提到这个模式那种模式，先照做，如果你顺利的完成上述的操作，那先给自己鼓个掌，不要惊讶，你已经做到了 100 万人都没做到的事，毕竟 Stack Overflow 也骄傲的宣称“<a href="https://stackoverflow.blog/2017/05/23/stack-overflow-helping-one-million-developers-exit-vim/">我们已经帮助一百万人成功的退出了 Vim</a>”</p>
+<p>现在我们已经有完成了编辑简单文本的能力了，虽然只是简单的输入。接下来我们要学习更多的操作来完善编辑文本的能力，但是在继续之前，你要确定上面的操作你已经练习过很多遍了。</p>
+<p>2018-04-06 发布</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../key-position/" class="btn btn-neutral float-right" title="键位操作">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="前言"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/vimhandbook/vimhandbook.github.io/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../key-position/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

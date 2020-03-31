@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>键位操作 - Vim 练级手册</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u952e\u4f4d\u64cd\u4f5c";
+    var mkdocs_page_input_path = "key-position.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Vim 练级手册</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">前言</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../get_started/">开始</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">键位操作</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#_1">键位操作</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_2">光标操作</a></li>
+        
+            <li><a class="toctree-l3" href="#_3">查找与替换</a></li>
+        
+            <li><a class="toctree-l3" href="#_4">复制、粘贴、删除</a></li>
+        
+            <li><a class="toctree-l3" href="#_5">撤销和重做</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mode/">常用模式</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vimrc/">vimrc 配置文件</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../advanced-key-position/">高级键位</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../vimgrep/">vimgrep 全局搜索</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../abbreviations/">Abbreviations 快速输入</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mapping/">Mapping 映射</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../all-key/">附录：Vim 键位整理</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Vim 练级手册</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>键位操作</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/vimhandbook/vimhandbook.github.io/edit/master/docs/key-position.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">键位操作</h1>
+<h2 id="_2">光标操作</h2>
+<p>只靠前面这点知识，我们仍然需要鼠标协助完成很多操作，并且可能还完成不好，接下来我们需要了解一些键盘移动光标的操作。</p>
+<p>我们先下载一个文本用作练习</p>
+<pre><code class="bash">$ wget http://grepcode.com/file_/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/lang/Object.java/\?v\=source -O Object.java
+$ vim Object.java
+</code></pre>
+
+<p>在 Vim 中光标操作基本都是在 <code>normal</code> 模式下完成的，如果你有时候搞不清，那就多按几次 <code>&lt;esc&gt;</code> 键。</p>
+<p><strong>上下左右</strong></p>
+<p><code>h, j, k, l</code> 四个键代表了方向键 <code>← ↓ ↑ →</code>，这个键位是我们前期经常用到的。在开始你会感觉非常别扭，为什么有了方向键还要这四个键位？想想你在键入信息后手挪到方向键，再挪回来的操作，每天的开发都会如此反复个几百次，节约掉这个时间，就是 Vim 高效的第一步。</p>
+<p>另外借助数字键可以更快的做到光标跳转，<code>5l</code> 表示向右移动 5 个字符，<code>5j</code> 表示向下移动 5 行，其他依次类推</p>
+<p><strong>翻页</strong></p>
+<p><code>&lt;ctrl&gt; + f</code> 的组合键可以向下翻一页，这类的组合键以后我会用 <code>&lt;c-f&gt;</code> 形式表示。</p>
+<pre><code class="vim">&lt;c-f&gt;   &quot; 向下移动一页
+&lt;c-d&gt;   &quot; 向下移动半页
+&lt;c-b&gt;   &quot; 向上移动一页
+&lt;c-u&gt;   &quot; 向上移动半页
+</code></pre>
+
+<p>以上四个键位在翻页时会经常使用，但是刚入门的话，我还是不建议你全部记住，只记住翻半页或一页的两个键位，在配合 <code>j, k</code> 精确到目标行就可以了，在入门阶段你要尽量减少快捷键的记忆量，在大量刻意练习并熟能生巧后，再去扩展快捷键。</p>
+<p><strong>行首行尾</strong></p>
+<pre><code class="vim">0   &quot; 快速跳到行首
+$   &quot; 快速跳到行尾
+g_  &quot; 快速跳到行尾最后一个非空字符（下一章我们会讨论它跟 $ 的区别）
+</code></pre>
+
+<p>在熟练应用 <code>h, j, k, l</code> 四个键位后，配合这两个键位可以让你几行之内的光标操作更加灵活</p>
+<p><strong>页头页尾</strong></p>
+<pre><code class="vim">gg  &quot; 快速跳到第一行
+G   &quot; 快速跳到最后一行
+</code></pre>
+
+<p>拿 <code>Object.java</code> 这个文本为例，如果你想马上去看最后几行写的是什么，你一定不想按不知道多少次的 <code>&lt;c-f&gt;</code> 组合键，但是如你所试，只需要 <code>G</code> 就可以了。</p>
+<p>现在我们已经学到了很多键位操作，我真诚的希望你能先花上几个小时的时间去练习它，最好是在一个你真正需要编辑的文档上来使用，将光标移动到需要输入的位置，<code>i</code> 进入 <code>insert</code> 模式，完毕后 <code>&lt;esc&gt;</code> 返回 <code>normal</code> 模式，如此反复，在这个过程中，你一定会有这样的想法，还不够，这些还不够，我还需要更快捷的东西，比如，搜索</p>
+<h2 id="_3">查找与替换</h2>
+<p>举个例子，在样本 <code>Object.java</code> 中假设光标在第 39 行，我们想要快速的定位到 <code>native</code> 单词，目前可以通过 <code>19l</code> 来实现，但是数数也是很麻烦的吧，这时可以通过行内查找很方便的实现。</p>
+<p><strong>行内查找</strong></p>
+<p>在目标行内按下功能键 <code>f</code>，此时界面无变化，但是右下角会出现字母 <code>f</code> 表示等待下一步操作，然后按下 <code>n</code>，光标便会移动到 <code>native</code> 的首字母上</p>
+<pre><code class="vim">fx      &quot; 从当前光标开始向右查找字符 x，x 为目标字符
+nfx     &quot; 从当前广告开始向右查找第 n 个字符 x，n 为数字
+Fx      &quot; 从当前光标开始向左查找字符 x，x 为目标字符
+nfx     &quot; 从当前广告开始向左查找第 n 个字符 x，n 为数字
+</code></pre>
+
+<p>同样的，在这里我建议大家开始只使用向右查找即可，这样也比较符合我们由左到右的阅读习惯，顶多每次先按一下 <code>0</code> 跳到行首就可以了。</p>
+<p><strong>全文查找</strong></p>
+<p>如果你想要把全文的 <code>native</code> 都找到，可以按下 <code>/</code> 进入 <code>command</code> 模式，随后输入 <code>native</code> 然后回车，此时光标会定位在第一个目标上，并高亮所有找到的目标单词。</p>
+<p>此时按下 <code>n</code> 光标就会向下在高亮的单词上依次跳转，<code>N</code> 则会反方向跳转。值得注意的地方时，<code>Native</code> 也会被找到，说明默认情况下查找对小写是不敏感的，在以后的章节我们会来讨论怎么处理，但是它对大写是敏感的，你可以用 <code>Native</code> 查找试试。</p>
+<p>最后一点，现在所有的目标区域都是高亮的，怎么取消呢？输入 <code>:nohls</code> 即可，为什么，我们以后再讲。</p>
+<pre><code class="vim">/word   &quot; 输入 / 会进入 command 模式，再输入先要搜索的单词并回车进行搜索
+?word   &quot; / 是向光标以后搜索，? 是向前搜索
+n       &quot; 英文字母 n，根据 / 或 ? 搜索的方向定位到下一个匹配目标
+N       &quot; 与 n 相反，定位匹配目标
+</code></pre>
+
+<p><strong>替换</strong></p>
+<p>替换一般都是和查找绑定在一起的操作，Vim 中提供了两种替换方式</p>
+<p>将 4 到 10 行内的 code 替换为 name</p>
+<pre><code class="vim">:4,10s/code/name/g
+</code></pre>
+
+<p>全文替换</p>
+<pre><code class="vim">:1,$s/code/name/g
+</code></pre>
+
+<p>不难理解，其实全文替换你也可以理解为替换 1 行到 $ 最后一行，唯一需要注意的是，第二个数字后面要记得跟上 <code>s</code></p>
+<pre><code class="vim">:n1,n2s/word1/word2/g   &quot; n1, n2 表示数字，替换 n1 行到 n2 行的单词
+:1,$s/word1/word2/g     &quot; 全文替换，也可以写成 :%s/word1/word2/g
+:1,$s/word1/word2/gc    &quot; 全文替换，并出现确认提示
+</code></pre>
+
+<h2 id="_4">复制、粘贴、删除</h2>
+<p>复制当前行 <code>yy</code>，删除并复制当前行 <code>dd</code>，粘贴到光标下一行 <code>p</code></p>
+<p>这三类按键在以后的使用频率会非常的高，他们不难，但是组合键非常多的种类。</p>
+<pre><code class="vim">dd          &quot; 删除当前行
+ndd         &quot; 向下删除 n 行
+d1G / dgg   &quot; 删除第一行到当前行的数据
+dG          &quot; 删除当前行到最后一行的数据
+d$          &quot; 删除当前字符到行尾
+d0          &quot; 从行首删除到当前字符
+yy          &quot; 复制当前行
+nyy         &quot; 从当前行开始复制 n 行
+y1G / ygg   &quot; 从第一行复制到当前行
+yG          &quot; 从当前行复制到最后一行
+y0          &quot; 从行首复制到当前字符
+y$          &quot; 从当前字符复制到行尾
+p, P        &quot; 黏贴，p 黏贴到光标下一行，P 黏贴到光标上一行
+</code></pre>
+
+<p>他们可以跟数字键和移动光标的键位配合使用，做出很多种方式的复制和删除，他们彼此之间组合也可以有意想不到的效果，比如 <code>ddp</code> 从字面意思可以理解为，先删除当前行，在复制到下一行，而实际操作后你会发现，它起到了将当前行下移一行的效果，这不就是某些程序 IDE 的快捷键功能吗，当熟练操作这些组合键，你会第一次感觉到 Vim 的魅力，什么鼠标操作都弱爆了，我几个键位就可以秒到他们，并且还远不止此。你还会继续学下去的，对吗？</p>
+<p>需要注意的一点是，<code>yy</code> 复制的数据只在当前缓冲区有效，退出文件再进来就不在生效，后面的章节我们会讨论怎样跨文件复制粘贴。</p>
+<p>接下来是删除单个字符，从当前光标向后删除并复制一个字符 <code>x</code></p>
+<pre><code class="vim">x        &quot; 向后删除一个字符
+nx       &quot; 向后删除 n 个字符
+X        &quot; 向前删除一个字符
+nX       &quot; 向前删除 n 个字符
+</code></pre>
+
+<p>在这里，如果你试着按下 <code>xp</code>，你会发现它完成删除当前字符，并向左粘贴了该字符，<code>p</code> 在复制的是几个字符的情况下，实现的也是粘贴字符，而不会跨行。</p>
+<h2 id="_5">撤销和重做</h2>
+<p>如果你操作了一些删除操作，又后悔了怎么办，第一个想到的是撤销，撤销以后又后悔了怎么办，重做。任何编辑器都会有的两个功能，Vim 当然也有</p>
+<pre><code class="vim">u       &quot; 撤销
+&lt;c-r&gt;   &quot; 重做
+</code></pre>
+
+<p>ok，要打住了，再讲下去东西就太多了，现在我们已经可以有点笨拙的在文本中移动光标，并进行复制、粘贴、删除、查找、替换、插入的操作。这样已经够了，我们已经可以用起来了，尽管还差了很远，但是停下来练习是很重要的。你在跟我的步骤练习中就会发现，你在进行某个操作时需要想很久才能按出正确的键，甚至不看教程就完全头脑空白不知所措，这样是肯定不行的。使用 Vim 最理想的状态是省去“想”的过程，完全靠手的感觉就做出相应的操作，这是需要相当大的练习才可以实现的，也这有这样，才能体现 Vim 快和爽的特点。加油吧！骚年，喝口水就赶紧练习吧。</p>
+<p>2018-04-07 发布</p>
+<p>2018-04-11 最后修改</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../mode/" class="btn btn-neutral float-right" title="常用模式">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../get_started/" class="btn btn-neutral" title="开始"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/vimhandbook/vimhandbook.github.io/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../get_started/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../mode/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
