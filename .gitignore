@@ -133,3 +133,4 @@ shells/tmux/tmux-*
 */yarn-debug.log*
 */yarn-error.log*
 npm-debug.log
+ossutil*
